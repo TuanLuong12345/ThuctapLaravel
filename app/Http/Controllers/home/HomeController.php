@@ -26,6 +26,7 @@ class HomeController extends Controller
             ->where('status', 1)
             ->orderBy('public_at', 'desc')
             ->get();
+
         $news_banner_en = NewsEn::where('banner', 1)
             ->where('public_at', '<=', $current_datetime)
             ->where('status', 1)

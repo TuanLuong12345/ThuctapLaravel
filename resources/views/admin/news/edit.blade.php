@@ -49,7 +49,7 @@
                                     >Ngày public:</label>
                                     <input type="datetime-local"
                                            id="public_at"
-                                           min="{{ date('Y-m-d\TH:i') }}"
+{{--                                           min="{{ date('Y-m-d\TH:i') }}"--}}
                                            name="public_at"
                                            value="{{ $newsPublicAt }}"
                                     >

@@ -7,7 +7,7 @@
 @import url(http://fonts.googleapis.com/css?family=Abel);
 
 body {
-    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Roboto', sans-serif;
     position: relative;
     font-weight:400px;
 }
@@ -20,7 +20,6 @@ a:hover {
     outline: none;
     text-decoration:none;
 }
-
 
 a:focus {
     outline:none;
@@ -36,7 +35,6 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 20px;
 }
 
 .btn:hover,
@@ -139,9 +137,9 @@ a#scrollUp i{
 
 .header-middle .container .row {
     border-bottom: 1px solid #f5f5f5;
-    margin-left: 820px;
+    margin-left: 0;
     margin-right: 0;
-    /* padding-bottom: 20px; */
+    padding-bottom: 20px;
     padding-top: 20px;
 }
 
@@ -202,7 +200,7 @@ a#scrollUp i{
     background: #FFFFFF;
     color: #696763;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     padding:0;
     padding-right: 0;
@@ -222,40 +220,35 @@ a#scrollUp i{
 
 
 .header-bottom {
-    padding-bottom: 5px;
-    padding-top: 1px;
-    margin-left: 74px;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 .navbar-collapse.collapse{
-    padding-left: 43px;
+    padding-left: 0;
 }
 
 .mainmenu ul li{
-    padding-right: 20px;
-    padding-left: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .mainmenu ul li:first-child{
     padding-left: 0px;
-    padding-right: 22px;
 }
 
 .mainmenu ul li a {
-    color: #000;
+    color: #696763;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 300;
     padding: 0;
     padding-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 25px;
 }
 
 .mainmenu ul li a:hover, .mainmenu ul li a.active,  .shop-menu ul li a.active{
     background:none;
-    color: #000;
-    margin-top: 10px;
+    color:#fdb45e;
 }
 
 .search_box input {
@@ -598,7 +591,7 @@ ul.sub-menu {
 }
 
 .girl {
-    margin-left: -55px;
+    margin-left: 0;
 }
 
 .item h1 {
@@ -647,9 +640,8 @@ ul.sub-menu {
 .control-carousel {
     position: absolute;
     top: 50%;
-    font-size: 89px;
+    font-size: 60px;
     color: #C2C2C1;
-    margin-left: -114px;
 }
 
 .control-carousel:hover{
@@ -1101,7 +1093,6 @@ h2.title {
 }
 
 .pagination {
-    /* margin-left: 550px; */
     display: inline-block;
     margin-bottom: 25px;
     margin-top: 0;
@@ -2402,7 +2393,7 @@ h2.title {
     background:#FE980F;
     border: 0 none;
     border-radius: 0;
-    margin-top: 16px;
+    /* margin-top: 6rem; */
 }
 
 .blank-arrow {
@@ -2526,161 +2517,71 @@ h2.title {
 .contact-info .social-networks ul li a:hover{
     color: #FE980F;
 }
-
-.pagination a {
-    display: inline-block;
-    width: 30px; /* Đây là kích thước của mỗi trang */
-    height: 30px; /* Đây là kích thước của mỗi trang */
-    text-align: center;
-    line-height: 30px;
-    border: 1px solid #000; /* Viền của mỗi trang */
-    margin: 0 5px; /* Khoảng cách giữa các trang */
-    text-decoration: none;
-    color: #000;
+.mainmenu .nav.navbar-nav li.active > a {
+    text-decoration: underline;
+    color: #0066cc;
+}
+.productinfo {
+    position: relative;
 }
 
-.pagination a:hover {
-    background: #f0f0f0; /* Màu nền khi di chuột qua */
+.productinfo img {
+    width: 100%;
+    height: auto;
+}
+
+
+.all_information {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px;
+    background-color: #3498db; /* Màu xanh */
+    color: #fff; /* Màu chữ trắng */
+    border-radius: 10px; /* Bo tròn mép của ô */
+    text-decoration: none; /* Loại bỏ gạch chân mặc định */
+}
+
+.all_information:hover {
+    background-color: #2979bb; /* Màu xanh khi di chuột qua */
 }
 .pagination {
     display: flex;
+    list-style: none;
+    padding: 0;
     justify-content: center;
-    align-items: center;
 }
 
-
-/* Áp dụng màu khác cho trang hiện tại */
-.pagination a.current {
-    background: dodgerblue;
-    color: #fff;
-}
-
-.all_information{
-    display: inline-block;
+.pagination a {
+    display: block;
+    width: 30px; /* Chiều rộng ô vuông */
+    height: 30px; /* Chiều cao ô vuông */
+    line-height: 30px;
+    text-align: center;
+    margin: 5px;
     text-decoration: none;
-    color: black;
-    background-color: #90EE90;
-    border: 2px solid black;
-    border-radius: 8px;
-    padding: 8px 16px;
-    margin-top: 8px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
-.image_title{
-    width: 70%;
-    margin-right: 351px;
-    margin-top: -254px;
-}
-.new_one_content{
-    margin-top: 10px;
-}
-.active {
-    color: blue !important;
-}
-.image_news_one_1_vi{
-    margin-top: -65px;
-    margin-left: 110px;
-}
-.image_news_one_1_en{
-    margin-top: -65px;
-    margin-left: 110px;
-}
-.image_news_one_2_vi{
-    margin-top: -175px;
-    margin-left: 50px;
-}
-.image_news_one_2_en{
-    margin-top: -135px;
-    margin-left: 50px;
-}
-.image_news_one_3_vi{
-    margin-top: -125px;
-    margin-left: 25px;
-}
-.image_news_one_3_en{
-    margin-top: -95px;
-    margin-left: 25px;
-}
-.image_news_one_4_vi{
-    margin-top: -55px;
-    margin-left: 100px;
-}
-.image_news_one_4_en{
-    margin-top: -40px;
-    margin-left: 100px;
-}
-.image_news_one_5_en{
-    margin-top: 15px;
-    margin-left: 60px;
-}
-.image_news_one_5_vi{
-    margin-top: 15px;
-    margin-left: 60px;
-}
-.image_news_one_6_en{
-    margin-top: -40px;
-    margin-left: 25px;
-}
-.image_news_one_6_vi{
-    margin-top: -28px;
-    margin-left: 25px;
-}
-.image_news_one_7_en{
-    margin-top: -150px;
-    margin-left: 110px;
-}
-.image_news_one_7_vi{
-    margin-top: 40px;
-    margin-left: 110px;
-}
-.image_news_one_8_en{
-    margin-top: -70px;
-    margin-left: 25px;
-}
-.image_news_one_8_vi{
-    margin-top: -70px;
-    margin-left: 25px;
-}
-.image_news_one_9_en{
-    margin-top: -25px;
-    margin-left: 125px;
 
+.pagination a.current {
+    background-color: #3498db; /* Màu xanh */
+    color: #fff; /* Màu chữ trắng */
+    border-color: #3498db; /* Màu viền xanh */
 }
-.image_news_one_9_vi{
-    margin-top: -25px;
-    margin-left: 125px;
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0; /* Đảm bảo không có margin */
 }
-.image_news_one_10_en{
-    margin-top: -85px;
-    margin-left: 125px;
+.form-group_1 {
+    margin-top: 90px;
 }
-.image_news_one_10_vi{
-    margin-top: -110px;
-    margin-left: 125px;
-}
-.image_news_one_11_en{
-    margin-top: -80px;
-    margin-left: 130px
-}
-.image_news_one_11_vi{
-    margin-top: -100px;
-    margin-left: 130px
-}
-.image_news_one_12_en{
-    margin-top: -80px;
-    margin-left: 130px;
-}
-.image_news_one_12_vi{
-    margin-top: -95px;
-    margin-left: 130px;
-}
-.image_news_one_13_en{
-    margin-top: -50px;
-    margin-left: 60px;
-}
-.image_news_one_13_vi{
-    margin-top: -65px;
-    margin-left: 60px;
-}
-.language-select{
-    margin-left: 430px;
+@media (max-width: 767px) {
+    .form-group_1 {
+        margin-top: 10px;
+    }
 }

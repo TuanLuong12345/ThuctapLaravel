@@ -5,8 +5,7 @@
  */
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
-    display: block;
-    background-color: #CCFFFF;
+    display: block
 }
 
 audio,canvas,video {
@@ -291,7 +290,7 @@ input,button,select,textarea {
 
 a {
     color: #428bca;
-    /* text-decoration: none; */
+    text-decoration: none
 }
 
 a:hover,a:focus {
@@ -684,7 +683,7 @@ pre code {
 
 .container {
     padding-right: 15px;
-    /* padding-left: 15px; */
+    padding-left: 15px;
     margin-right: auto;
     margin-left: auto
 }
@@ -721,15 +720,13 @@ pre code {
 
 @media(min-width: 1200px) {
     .container {
-        width: 1231px;
+        width:1170px
     }
 }
 
 .row {
-    /* margin-right: -15px; */
-    margin-left: -15px;
-    margin-bottom: 15px;
-    margin-top: -26px;
+    margin-right: -15px;
+    margin-left: -15px
 }
 
 .row:before,.row:after {
@@ -754,7 +751,7 @@ pre code {
     position: relative;
     min-height: 1px;
     padding-right: 15px;
-    padding-left: 15px;
+    padding-left: 15px
 }
 
 .col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12 {
@@ -971,8 +968,7 @@ pre code {
     }
 
     .col-sm-12 {
-        width: 100%;
-        /* height: 750px; */
+        width: 100%
     }
 
     .col-sm-11 {
@@ -984,10 +980,7 @@ pre code {
     }
 
     .col-sm-9 {
-        background-color: #fe980f;
-        width: 100%;
-        height: 40px;
-        margin-left: -58px;
+        width: 75%
     }
 
     .col-sm-8 {
@@ -1181,7 +1174,7 @@ pre code {
 
 @media(min-width: 992px) {
     .col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12 {
-        float: right;
+        float:left
     }
 
     .col-md-12 {
@@ -1391,7 +1384,7 @@ pre code {
 
 @media(min-width: 1200px) {
     .col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12 {
-        float:right
+        float:left
     }
 
     .col-lg-12 {
@@ -6574,62 +6567,4 @@ th.hidden-lg,td.hidden-lg {
         display: none!important
     }
 }
-.login_button{
-    display: inline-block;
-    padding: 10px 25px;
-    background-color: #337ab7;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-left: 75%;
-}
-.add_user_button{
-    display: inline-block;
-    padding: 10px 25px;
 
-    background-color: #337ab7;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-left: 87%;
-}
-.login-button:hover {
-    background-color: #135688;
-    margin-bottom: 20px;
-}
-.productinfo{
-    height: 350px;
-    margin-bottom: 60px;
-}
-.shop-menu {
-    text-align: right; /* Căn chỉnh vị trí văn bản sang phải */
-}
-
-.shop-menu ul {
-    display: inline-block; /* Hiển thị danh sách các mục liên kết trên cùng một hàng */
-}
-
-.shop-menu ul li {
-    display: inline; /* Hiển thị các mục danh sách liên kết trên cùng một hàng */
-    margin-left: 15px; /* Tạo khoảng cách giữa các mục danh sách liên kết */
-}
-
-.header_home {
-    position: fixed;
-    width: 100%;
-    z-index: 1000; /* Đảm bảo nằm trên tất cả các phần khác của trang */
-    top: 0;
-    left: 0;
-}
-.active {
-    background-color: #187fd7; /* Màu xanh lá cây hoặc màu khác tùy chọn */
-    color:black; /* Màu chữ trắng hoặc màu khác tùy chọn */
-    margin-left: 0px;
-
-}
-.navbar-nav > li > a {
-    text-decoration: none;
-}
-.label_2{
-    color: black;
-}
