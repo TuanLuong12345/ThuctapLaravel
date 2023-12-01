@@ -116,7 +116,7 @@
         </div>
     </div><!--/header-bottom-->
 </header><!--/header-->
-<section class="section-contact-us" style="margin-top: 80px">
+<section class="section-contact-us" >
     <link href='{{asset('https://fonts.googleapis.com/css?family=Roboto:400,100,300,700')}}' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{asset('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')}}">
 
@@ -188,7 +188,7 @@
                         <div class="col-md-6 d-flex align-items-stretch">
                             <div id="map">
                                 <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.117121354775!2d105.80182687438716!3d21.027999187806397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab42139e9c5f%3A0x6eca1d6b8b7323a4!2sT%C3%B2a%20nh%C3%A0%20Icon%204%20Tower!5e0!3m2!1svi!2s!4v1699867178387!5m2!1svi!2s" width="500" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.117121354775!2d105.80182687438716!3d21.027999187806397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab42139e9c5f%3A0x6eca1d6b8b7323a4!2sT%C3%B2a%20nh%C3%A0%20Icon%204%20Tower!5e0!3m2!1svi!2s!4v1699867178387!5m2!1svi!2s" width="500" height="525" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -245,7 +245,12 @@
     </a>
 </section>
 
-
+<script src="{{asset('Eshopper/js/jquery.js')}}"></script>
+<script src="{{asset('Eshopper/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('Eshopper/js/jquery.scrollUp.min.js')}}"></script>
+<script src="{{asset('Eshopper/js/price-range.js')}}"></script>
+<script src="{{asset('Eshopper/js/jquery.prettyPhoto.js')}}"></script>
+<script src="{{asset('Eshopper/js/main.js')}}"></script>
 <script src="{{asset('contacts/js/popper.js')}}"></script>
 <script src="{{asset('contacts/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('contacts/js/jquery.validate.min.js')}}"></script>

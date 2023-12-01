@@ -1,41 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ trans('messages.calender') }}</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{{ trans('messages.news') }}</title>
     <link href="{{asset('Eshopper/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('Eshopper/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('Eshopper/css/prettyPhoto.css')}}" rel="stylesheet">
     <link href="{{asset('Eshopper/css/price-range.css')}}" rel="stylesheet">
-    <link href="{{asset('Eshopper/css/animate.css')}}}" rel="stylesheet">
+    <link href="{{asset('Eshopper/css/animate.css')}}" rel="stylesheet">
     <link href="{{asset('Eshopper/css/main.css')}}" rel="stylesheet">
     <link href="{{asset('Eshopper/css/responsive.css')}}" rel="stylesheet">
+    <!--[if lt IE 9]>
     <script src="{{asset('Eshopper/js/html5shiv.js')}}"></script>
     <script src="{{asset('Eshopper/js/respond.min.js')}}"></script>
+    <![endif]-->
     <link rel="shortcut icon" href="{{asset('Eshopper/images/ico/favicon.ico')}}">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144"
-          href="{{asset('Eshopper/images/ico/apple-touch-icon-144-precomposed.png')}}">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114"
-          href="{{asset('Eshopper/images/ico/apple-touch-icon-114-precomposed.png')}}">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72"
-          href="{{asset('Eshopper/images/ico/apple-touch-icon-72-precomposed.png')}}">
-    <link rel="apple-touch-icon-precomposed"
-          href="{{asset('Eshopper/images/ico/apple-touch-icon-57-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('Eshopper/images/ico/apple-touch-icon-144-precomposed.png')}}}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('Eshopper/images/ico/apple-touch-icon-114-precomposed.png')}}}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('Eshopper/images/ico/apple-touch-icon-72-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" href="{{asset('Eshopper/images/ico/apple-touch-icon-57-precomposed.png')}}">
+</head><!--/head-->
 
-
-</head>
 <body>
-<section id="header" class="header_home"><!--header-->
+<header id="header"><!--header-->
     <div class="header-middle"><!--header-middle-->
-        <div class="container ">
+        <div class="container">
             <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="#"><img src="{{asset('Eshopper/images/home/logo.png')}}" alt="" /></a>
+                    </div>
+                    <div class="btn-group pull-right">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                Language
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="language-select">
+                                    <a href="{{ route('switch.language', ['locale' => 'vi']) }}">
+                                        VI
+                                    </a>
+                                </li>
+                                <li><a href="{{ route('switch.language', ['locale' => 'en']) }}">EN</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                DOLLAR
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Canadian Dollar</a></li>
+                                <li><a href="#">Pound</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-sm-8">
                     <div class="shop-menu pull-right">
-                        <ul class="nav navbar-nav ">
-                            <li><a href="{{route('login')}}"><i class="fa fa-user"></i>{{ trans('messages.login') }}</a></li>
-                            <li><a href=""><i class="fa fa-lock"></i> {{ trans('messages.register') }}</a></li>
+                        <ul class="nav navbar-nav">
+                            <li><a href=""><i class="fa fa-user"></i>{{ trans('messages.register') }}</a></li>
+                            <li><a href="{{route('login')}}"><i class="fa fa-lock"></i> {{ trans('messages.login') }}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -48,8 +78,7 @@
             <div class="row">
                 <div class="col-sm-9">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                data-target=".navbar-collapse">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -61,12 +90,8 @@
                             <li class="dropdown {{ Request::is('home') ? 'active' : '' }}">
                                 <a href="{{ route('home.index') }}">{{ trans('messages.home') }}</a>
                             </li>
-                            <li class="dropdown {{ Request::is('home/news*') ? 'active' : '' }}"><a href="{{route('home.news_all')}}">{{ trans('messages.news') }}</a>
-                                {{--                                <ul role="menu" class="sub-menu">--}}
-                                {{--                                    <li><a href="shop.html">Bài viết mới</a></li>--}}
-                                {{--                                    <li><a href="product-details.html">Bài viết nổi bật</a></li>--}}
-                                {{--                                    <li><a href="checkout.html">Tất cả bài viết</a></li>--}}
-                                {{--                                </ul>--}}
+                            <li class="dropdown {{ Request::is('home/news*') ? 'active' : '' }}">
+                                <a href="{{route('home.news_all')}}">{{ trans('messages.news') }}</a>
                             </li>
                             <li class="dropdown {{ Request::is('home/contacts') ? 'active' : '' }}">
                                 <a href="{{route('home.contacts')}}">{{ trans('messages.contacts') }}</a>
@@ -79,21 +104,18 @@
                                     <a href="{{ route('info.type', ['type' => $infoType->type]) }}">{{ $infoType->title }}</a>
                                 </li>
                             @endforeach
-                            <li class="language-select" >
-                                <a style="margin-right: -60px;margin-left: 10px" href="{{ route('switch.language', ['locale' => 'vi']) }}">
-                                    VI
-                                </a>
-                            </li>
-                            <li ><a href="{{ route('switch.language', ['locale' => 'en']) }}">EN</a></li>
                         </ul>
-
                     </div>
                 </div>
-
+                <div class="col-sm-3">
+                    <div class="search_box pull-right">
+                        <input type="text" placeholder="Search"/>
+                    </div>
+                </div>
             </div>
         </div>
     </div><!--/header-bottom-->
-</section><!--/header-->
+</header><!--/header-->
 <div class="home_menu">
     <a style="margin-left: 45px;" href="{{route('home.index')}}" >{{ trans('messages.home') }}</a>
     <span>  /  </span> <a href="{{route('home.calender')}}" >{{ trans('messages.calender') }}</a>
@@ -178,32 +200,19 @@
             calendar.render();
         });
     </script>
-    <style>
-
-        body {
-            margin: 40px 10px;
-            padding: 0;
-            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-            font-size: 14px;
-            margin-top: 100px ;
-        }
-        #calendar {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .fc .fc-toolbar.fc-header-toolbar {
-            margin-top: 30px;
-        }
-        .fc .fc-daygrid-day.fc-day-today {
-            background-color: #075809;
-        }
-    </style>
 </div>
 <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647;">
     <i class="fa fa-angle-up">
 
     </i>
 </a>
+
+<script src="{{asset('Eshopper/js/jquery.js')}}"></script>
+<script src="{{asset('Eshopper/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('Eshopper/js/jquery.scrollUp.min.js')}}"></script>
+<script src="{{asset('Eshopper/js/price-range.js')}}"></script>
+<script src="{{asset('Eshopper/js/jquery.prettyPhoto.js')}}"></script>
+<script src="{{asset('Eshopper/js/main.js')}}"></script>
 </body>
 </html>
 
