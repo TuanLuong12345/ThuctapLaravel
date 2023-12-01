@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>{{ trans('messages.news') }}</title>
+    <title>{{ trans('messages.contacts') }}</title>
     <link href="{{asset('Eshopper/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('Eshopper/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('Eshopper/css/prettyPhoto.css')}}" rel="stylesheet">
@@ -238,11 +238,16 @@
             </div>
         </div>
     </div>
-    <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647;">
-        <i class="fa fa-angle-up">
-
-        </i>
-    </a>
+    <footer id="footer"><!--Footer-->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+                    <p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+                </div>
+            </div>
+        </div>
+    </footer><!--/Footer-->
 </section>
 
 <script src="{{asset('Eshopper/js/jquery.js')}}"></script>
