@@ -157,7 +157,7 @@ a#scrollUp i{
     font-size: 12px;
     margin-right: 20px;
     padding: 2px 15px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .usa:hover {
@@ -2593,7 +2593,7 @@ h2.title {
 }
 @media only screen and (max-width: 1284px) {
     .image_title img {
-       width: 100%;
+        width: 100%;
         height: auto;
     }
 }
