@@ -123,7 +123,9 @@
             <div class="home_menu">
                 <a href="{{route('home.index')}}">    {{ trans('messages.home') }}</a>
                 <span>  /  </span>
-                <a href="{{route('home.news_all')}}">{{ trans('messages.news') }}</a>
+                <a href="{{route('home.news_all')}}">
+                    {{ trans('messages.news') }}
+                </a>
                 <span>  /  </span>
                 <a href="#">  {{ $locale_default === 'vi' ? $news_one->title : ($news_one_en ? $news_one_en->title : '') }}
                 </a>
@@ -143,7 +145,6 @@
                                 />
                             </div>
                         </div>
-
                     </div>
                     @if($news_one_en == null && $locale_default ==='en')
                         <h3 class="centered-text">No corresponding English version article.</h3>
@@ -160,11 +161,13 @@
         </div>
     </div>
 </div>
+
 <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647;">
     <i class="fa fa-angle-up">
 
     </i>
 </a>
+
 <footer id="footer"><!--Footer-->
     <div class="footer-bottom">
         <div class="container">
@@ -175,6 +178,7 @@
         </div>
     </div>
 </footer><!--/Footer-->
+
 <script src="{{asset('Eshopper/js/jquery.js')}}"></script>
 <script src="{{asset('Eshopper/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('Eshopper/js/jquery.scrollUp.min.js')}}"></script>

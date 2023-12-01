@@ -2585,3 +2585,14 @@ h2.title {
         margin-top: 10px;
     }
 }
+.image_title img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 1284px) {
+    .image_title img {
+       width: 100%;
+        height: auto;
+    }
+}
