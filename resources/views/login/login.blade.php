@@ -46,11 +46,11 @@
                         <ul class="nav navbar-nav collapse navbar-collapse">
                             <li><a href="{{route('home.index')}}" style="color: red;text-decoration: underline;margin-top: 40px" class="active" >{{ trans('messages.home') }}</a></li>
                             <li class="language-select" >
-                                <a style="margin-top: 40px; margin-left: 350px; margin-right: -30px" href="{{ route('switch.language', ['locale' => 'vi']) }}">
+                                <a  href="{{ route('switch.language', ['locale' => 'vi']) }}">
                                     VI
                                 </a>
                             </li>
-                            <li ><a style="margin-top: 40px" href="{{ route('switch.language', ['locale' => 'en']) }}">EN</a></li>
+                            <li ><a href="{{ route('switch.language', ['locale' => 'en']) }}">EN</a></li>
                         </ul>
 
                     </div>
