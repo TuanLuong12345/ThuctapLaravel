@@ -171,7 +171,7 @@
                                                 <textarea name="content" class="form-control"  cols="30" rows="6" placeholder="{{ trans('messages.contact_content_placeholder') }}"></textarea>
                                             </div>
                                         </div>
-                                        <div class="form-group">
+                                        <div class=" col-md-3 form-group">
                                             <div class="g-recaptcha" data-sitekey="6LfqYw4pAAAAABJtg7A9b78Hl_w4NRRmiSDfnW67"></div>
                                         </div>
                                         <div class="col-md-3">

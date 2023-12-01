@@ -2578,18 +2578,19 @@ h2.title {
     margin: 0; /* Đảm bảo không có margin */
 }
 .form-group_1 {
-    margin-top: 90px;
+    margin-top: 85%;
 }
 @media (max-width: 767px) {
     .form-group_1 {
-        margin-top: 10px;
+        margin-top: 3%;
+        margin-left: 30%;
+        margin-bottom: 3%;
     }
 }
 .image_title img {
     max-width: 100%;
     height: auto;
 }
-
 @media only screen and (max-width: 1284px) {
     .image_title img {
        width: 100%;
