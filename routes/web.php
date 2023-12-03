@@ -194,10 +194,10 @@ Route::prefix('admin')->middleware('set_locale')->group(function () {
             ->name('news.store');
         Route::get('/edit_select/{id}', [NEWSAdminController::class, 'edit_select'])
             ->name('news.edit_select')
-            ->middleware(EditDeleteNewsMiddleWare::class);
+          ;
         Route::get('/edit/{id}', [NEWSAdminController::class, 'edit'])
             ->name('news.edit')
-            ->middleware(EditDeleteNewsMiddleWare::class);
+            ;
         Route::post('/update/{id}', [NEWSAdminController::class, 'update'])
             ->name('news.update');
         Route::get('/delete/{id}', [NEWSAdminController::class, 'delete'])

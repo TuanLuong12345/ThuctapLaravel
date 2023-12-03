@@ -197,8 +197,8 @@
 
             const newsItem = `
                 <div class="productinfo text-center col-md-4" data-id="${news.id}">
-                    <h2>${title}</h2>
                     <img style="object-fit: cover" src="{{ asset('storage/images/') }}/${news.thumbnail}" alt=""/>
+                     <h2>${title}</h2>
                     <a class="all_information" href="#" onclick="showDetails(${news.id})">{{ trans('messages.detail') }}</a>
                 </div>
             `;

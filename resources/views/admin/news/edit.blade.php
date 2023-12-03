@@ -140,8 +140,14 @@
                                 <div class="my-2">
                                     Ảnh Minh Họa:
 
-                                    <img class="thumbnail" src="{{asset('storage/images/'.$newsEditEn->thumbnail)}}"
-                                         alt="">
+                                    <img class="thumbnail" src="{{asset('storage/images/'.$newsEditEn->thumbnail)}}" alt="">
+                                    <input
+                                        type="file"
+                                        name="thumbnail"
+                                        id="thumbnail"
+                                        accept="image/*"
+                                        class="form-control"
+                                    >
                                     <div class="form-group">
                                         <label class="col-md-12"
                                                for="public_at"
@@ -149,11 +155,13 @@
 
                                         >Ngày public:</label>
                                         <input type="datetime-local"
-                                               min="{{ date('Y-m-d\TH:i') }}"
                                                id="public_at"
+                                               {{--                                           min="{{ date('Y-m-d\TH:i') }}"--}}
                                                name="public_at"
+                                               value="{{ $newsPublicAt }}"
                                         >
                                     </div>
+
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form6Example7">Nội dung :</label>

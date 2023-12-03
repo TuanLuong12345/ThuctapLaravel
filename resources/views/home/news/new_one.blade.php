@@ -135,12 +135,12 @@
                     <h2 style="text-align: center">
                         {{ $locale_default === 'vi' ? $news_one->title : ($news_one_en ? $news_one_en->title : '') }}
                     </h2>
-                    <div class="col-md-8" >
-                        <div class="image_title col-md-4">
+                    <div class="col-md-7" >
+                        <div class="image_title col-md-3">
                             <div class=" text-center">
                                 <img
                                     src="{{ asset('storage/images/' . $news_one->thumbnail) }}"
-                                    class="image_news_one_{{$news_one->id}}_{{$locale_default}}"
+                                    class="image_news_one"
                                     alt=""
                                 />
                             </div>

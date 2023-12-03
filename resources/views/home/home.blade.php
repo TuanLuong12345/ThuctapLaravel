@@ -140,19 +140,22 @@
                         @if($locale === 'vi')
                             @foreach($news_banner as $key => $new_banner)
                                 <div class="item{{ $key === 0 ? ' active' : '' }}">
-                                    <div class="col-sm-12">
-                                        <img src="storage/images/{{$new_banner->thumbnail}}" class="girl img-responsive"
-                                             alt=""/>
-                                    </div>
+                                    <a  href="{{ route('home.news_one', ['locale' => $locale, 'id' => $new_banner->id]) }}">
+                                        <div class="col-sm-12">
+                                            <img src="{{ asset('storage/images/' . $new_banner->thumbnail) }}" class="girl img-responsive" alt=""/>
+                                        </div>
+                                    </a>
                                 </div>
                             @endforeach
                         @else
                             @foreach($news_banner_en as $key => $new_banner_en)
                                 <div class="item{{ $key === 0 ? ' active' : '' }}">
-                                    <div class="col-sm-12">
-                                        <img src="storage/images/{{$new_banner_en->thumbnail}}"
-                                             class="girl img-responsive" alt=""/>
-                                    </div>
+                                    <a  href="{{ route('home.news_one', ['locale' => $locale, 'id' => $new_banner_en->id]) }}">
+                                        <div class="col-sm-12">
+                                            <img src="storage/images/{{$new_banner_en->thumbnail}}"
+                                                class="girl img-responsive" alt=""/>
+                                        </div>
+                                    </a>
                                 </div>
                             @endforeach
                         @endif
