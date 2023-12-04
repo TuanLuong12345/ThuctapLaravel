@@ -50,7 +50,8 @@ class AdminUserController extends Controller
                 'email' => $request->email,
                 'phone' => $request->phone,
                 'password' => Hash::make($request->password),
-                'role' => $request->input('role')
+                'role' => $request->input('role'),
+                'email_verified_at'=> now()
             ]);
             toastr()->success('Thêm thông tin người dùng thành công');
             return redirect()->route('users.index');

@@ -123,107 +123,107 @@
     </div><!--/header-bottom-->
 </header><!--/header-->
 
-<section id="slider"><!--slider-->
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div id="slider-carousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        @foreach($news_banner as $key => $new_banner)
-                            <li data-target="#slider-carousel" data-slide-to="{{ $key }}"
-                                class="{{ $key === 0 ? 'active' : '' }}">
-                            </li>
-                        @endforeach
-                    </ol>
-
-                    <div class="carousel-inner">
-                        @if($locale === 'vi')
-                            @foreach($news_banner as $key => $new_banner)
-                                <div class="item{{ $key === 0 ? ' active' : '' }}">
-                                    <a  href="{{ route('home.news_one', ['locale' => $locale, 'id' => $new_banner->id]) }}">
-                                        <div class="col-sm-12">
-                                            <img src="{{ asset('storage/images/' . $new_banner->thumbnail) }}" class="girl img-responsive" alt=""/>
-                                        </div>
-                                    </a>
-                                </div>
-                            @endforeach
-                        @else
-                            @foreach($news_banner_en as $key => $new_banner_en)
-                                <div class="item{{ $key === 0 ? ' active' : '' }}">
-                                    <a  href="{{ route('home.news_one', ['locale' => $locale, 'id' => $new_banner_en->id]) }}">
-                                        <div class="col-sm-12">
-                                            <img src="{{ asset('storage/images/' . $new_banner_en->thumbnail) }}"
-                                                class="girl img-responsive" alt=""/>
-                                        </div>
-                                    </a>
-                                </div>
-                            @endforeach
-                        @endif
-                    </div>
-                </div>
-
-                <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </div>
-
-        </div>
+<form method="post" action="{{route('users.register.store')}}">
+    @csrf
+    <div class="col-md-12">
+        <label class="form-label ">
+            Name:
+        </label>
+        <input
+            name="name"
+            type="text"
+            class="form-control"
+            value="{{old('name')}}"
+            placeholder="Nhập tên người dùng"
+            maxlength="255"
+            required
+        >
+        @error('name')
+        <div class="alert alert-danger">* {{ $message }}</div>
+        @enderror
     </div>
-</section><!--/slider-->
-
-<section>
-    <div class="container">
-        <div class="row ">
-            <div class="col-sm-12 padding-right">
-                <div class="features_items"><!--features_items-->
-                    <h2 class="title text-center">Bài viết mới</h2>
-                    @if($locale === 'vi')
-                        @foreach($latest_news as $latest_new)
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="storage/images/{{$latest_new->thumbnail}}" alt=""/>
-                                            <h2>{{$latest_new->title}}</h2>
-                                            <a class="all_information"
-                                               href={{route('home.news_one',['locale'=>$locale,'id'=>$latest_new->id])}}">
-                                                {{ trans('messages.detail') }}
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    @else
-                        @foreach($latest_news_en as $latest_new_en)
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="storage/images/{{$latest_new_en->thumbnail}}" alt=""/>
-                                            <h2>{{$latest_new_en->title}}</h2>
-                                            <a class="all_information"
-                                                href={{route('home.news_one',['locale'=>$locale,'id'=>$latest_new_en->id])}}">
-                                                {{ trans('messages.detail') }}
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                   @endif
-                </div><!--features_items-->
-
-            </div>
-        </div>
+    <div class="col-md-12">
+        <label class="form-label">
+            Email:
+        </label>
+        <input
+            name="email"
+            type="email"
+            class="form-control"
+            placeholder="Nhập email"
+            maxlength="255"
+            required
+            value="{{old('email')}}"
+        >
+        @error('email')
+        <div class="alert alert-danger">* {{ $message }}</div>
+        @enderror
     </div>
-        <a href="{{route('home.news_all')}}">
-        <h2 class="title text-center">{{ trans('messages.all_post') }}</h2>
-        </a>
-</section>
+    <div class="col-md-12">
+        <label class="form-label">
+            Password:
+        </label>
+        <input
+            name="password"
+            type="password"
+            class="form-control"
+            maxlength="255"
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}"
+            title="Mật khẩu của bạn phải có độ dài ít nhất là 8 bao gồm ít nhất 1 chữ hoa,
+                                 1 chữ thường ,1 số và 1 kí tự đặc biệt"
+            id="myInput"
+            placeholder="Nhập mật khẩu"
+            required
+            value="{{old('password')}}"
+        >
+        @error('password')
+        <div class="alert alert-danger">* {{ $message }}</div>
+        @enderror
+    </div>
+    <div class="col-md-12">
+        <label class="form-label">
+            Confirm Password:
+        </label>
+        <input
+            name="confirmPassword"
+            type="password"
+            class="form-control"
+            placeholder="Nhập lại mật khẩu"
+            maxlength="255"
+            required
+            value="{{old('confirmPassword')}}"
+        >
+        @error('confirmPassword')
+        <div class="alert alert-danger">* {{ $message }}</div>
+        @enderror
+    </div>
+    <div class="col-md-12">
+        <label class="form-label">
+            Phone:
+        </label>
+        <input
+            name="phone"
+            type="text"
+            class="form-control"
+            placeholder="Nhập số điện thoại"
+            maxlength="10"
+            pattern="0[0-9]{9}"
+            title="Số điện thoại không đúng bao gồm 10 số và bắt đầu bằng số 0"
+            required
+            value="{{old('phone')}}"
+        >
+        @error('phone')
+        <div class="alert alert-danger">* {{ $message }}</div>
+        @enderror
+    </div>
+    <button
+        type="submit"
+        class="btn btn-primary "
+        style="margin-left: 10%;margin-top: 2%; margin-bottom: 6%"
+    >
+        Đăng kí
+    </button>
+</form>
 
 <footer id="footer"><!--Footer-->
     <div class="footer-bottom">

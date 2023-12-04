@@ -3,10 +3,16 @@
 namespace App\Http\Controllers\home;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserRequest;
 use App\Models\Contact;
 use App\Models\News;
 use App\Models\NewsEn;
+use App\Models\User;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Http\Request;
@@ -203,5 +209,31 @@ class HomeController extends Controller
         app()->setLocale($locale);
         Session::put('locale', $locale);
         return redirect()->back();
+    }
+    public function register()
+    {
+        return view('home.register.index');
+    }
+    public function register_store(Request $request)
+    {
+        try {
+            // Thêm người dùng mới
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'password' => Hash::make($request->password),
+                'role' => 'user',
+                'reset_password'=> 0,
+                'email_verified_at' => now(),
+            ]);
+            Auth::login($user);
+
+            toastr()->success('Đăng ký thành công');
+            return redirect()->route('dashboard.index');
+        } catch (\Exception $exception) {
+            DB::rollBack();
+            Log::error('Messege:' . $exception->getMessage() . '----Line:' . $exception->getLine());
+        }
     }
 }

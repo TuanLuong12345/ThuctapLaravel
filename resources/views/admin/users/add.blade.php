@@ -5,7 +5,7 @@
     <form method="post" action="{{route('users.store')}}">
         @csrf
         <div class="col-md-6">
-            <label  class="form-label">
+            <label class="form-label">
                 Name:
             </label>
             <input
@@ -22,7 +22,7 @@
             @enderror
         </div>
         <div class="col-md-6">
-            <label  class="form-label">
+            <label class="form-label">
                 Email:
             </label>
             <input
@@ -39,7 +39,7 @@
             @enderror
         </div>
         <div class="col-md-6">
-            <label  class="form-label">
+            <label class="form-label">
                 Password:
             </label>
             <input
@@ -61,7 +61,7 @@
             @enderror
         </div>
         <div class="col-md-6">
-            <label  class="form-label">
+            <label class="form-label">
                 Confirm Password:
             </label>
             <input
@@ -77,8 +77,8 @@
             <div class="alert alert-danger">* {{ $message }}</div>
             @enderror
         </div>
-        <div class="col-md-6" >
-            <label  class="form-label">
+        <div class="col-md-6">
+            <label class="form-label">
                 Phone:
             </label>
             <input
@@ -96,38 +96,22 @@
             <div class="alert alert-danger">* {{ $message }}</div>
             @enderror
         </div>
-{{--        <div class="col-md-6">--}}
-{{--            <label  class="form-label">--}}
-{{--                Role:--}}
-{{--            </label>--}}
-{{--            <input--}}
-{{--                name="role"--}}
-{{--                type="text"--}}
-{{--                class="form-control"--}}
-{{--                placeholder="Nhập vai trò"--}}
-{{--                required--}}
-{{--                value="{{old('role')}}"--}}
-{{--            >--}}
-{{--            @error('role')--}}
-{{--            <div class="alert alert-danger">* {{ $message }}</div>--}}
-{{--            @enderror--}}
-{{--        </div>--}}
-        <div class="col-md-6 " style="display: grid">Chọn vai trò:
-            <label>
-                <input type="radio"
-                       name="role"
-                       class="role_user"
-                       value="admin">
-                Admin
-            </label>
-            <label>
-                <input type="radio"
-                       name="role"
-                       class="role_user"
-                       value="user"
-                > User
-            </label>
-        </div>
+            <div class="col-md-6 " style="display: grid">Chọn vai trò:
+                <label>
+                    <input type="radio"
+                           name="role"
+                           class="role_user"
+                           value="admin">
+                    Admin
+                </label>
+                <label>
+                    <input type="radio"
+                           name="role"
+                           class="role_user"
+                           value="user"
+                    > User
+                </label>
+            </div>
         <button
             type="submit"
             class="btn btn-primary"
